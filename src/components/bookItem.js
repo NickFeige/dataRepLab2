@@ -1,4 +1,4 @@
-import Button from 'react-bootstrap/Button';
+
 import Card from 'react-bootstrap/Card';
 
 function BookItem(props){
@@ -7,14 +7,14 @@ function BookItem(props){
             <Card>
             <Card.Header>{props.myBook.title}</Card.Header>    
             <Card.Body><blockquote>
-                <img src={props.myBook.thumbnailUrl}> </img>
+                <img src={props.myBook.thumbnailUrl}></img>
                 <footer>{props.myBook.authors[0]}</footer>
-                </blockquote></Card.Body>
-           
+                </blockquote>
+            </Card.Body>
+    
             </Card>
             
-        </div>
-        
+        </div>    
     );
 }
 export default BookItem;
