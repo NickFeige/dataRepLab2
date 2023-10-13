@@ -45,6 +45,6 @@ function Read(){
             <h3>hello from read</h3>
             <Books myBooks={data}></Books>
         </div>
-    );
+    )
 }
 export default Read;
