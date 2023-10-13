@@ -5,9 +5,8 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Content from './components/content';
-import Footer from './components/footer';
-import Header from './components/header';
 import {BrowserRouter,Routes,Route}from 'react-router-dom';
+// imported the create/red from componants
 import Create from './components/create';
 import Read from './components/read';
 
