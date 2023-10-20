@@ -16,7 +16,11 @@ useEffect(
                 setData(response.data.books);
             }
         )
-        .catch()            
+        .catch(
+            (error)=>{
+                console.log(error);
+            }
+        )            
     },[]
 );
 
