@@ -12,7 +12,7 @@ function Create() {
             
             <form>
                 <div className="form-group">
-                    <label>Edit Book Title: </label>
+                    <label>Add Book Title: </label>
                     <input type="text"
                         className="form-control"
                         value={title}
@@ -20,7 +20,7 @@ function Create() {
                     />
                 </div>
                 <div className="form-group">
-                    <label>Edit Book Aurthor: </label>
+                    <label>Add Book Aurthor: </label>
                     <input type="text"
                         className="form-control"
                         value={title}
@@ -28,12 +28,15 @@ function Create() {
                     />
                 </div>
                 <div className="form-group">
-                    <label>Edit front page url: </label>
+                    <label>Add front page url: </label>
                     <input type="text"
                         className="form-control"
                         value={title}
                         onChange={(e) => { setTitle(e.target.value) }}
                     />
+                </div>
+                <div>
+                    <input type="submit" value="Add book"></input>
                 </div>
             
             
