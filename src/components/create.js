@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 
 function Create() {
     //creating an add function and setting a array
@@ -9,8 +10,17 @@ function Create() {
     const handleSubmit=(e)=>{
         e.preventDefault();
         console.log("Title: "+title+"Author: "+author+"Url Cover: "+url);
+        const book=({
+            title:title,
+            author:author,
+            url:url,
+        })
+        axios.post('http://localhost:4000/api/book',book)
+        .then()
+        .catch();
     }
     return (
+        //all my in put boxes 
         <div>
             <h3>hello from create</h3>
            

@@ -10,10 +10,11 @@ const [data,setData]= useState([]);
 //acess to the api method
 useEffect(
     ()=>{
-        axios.get('https://jsonblob.com/api/jsonblob/1161593332966481920')
+        
+        axios.get('http://localhost:4000/api/book')
         .then(
             (response)=>{
-                setData(response.data.books);
+                setData(response.data.myBooks);
             }
         )
         .catch(
