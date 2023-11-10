@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.post('/api/book',(req,res)=>{
-  console.log(req,body);
+  console.log(req.body);
   res.send("data recived");
 })
 
