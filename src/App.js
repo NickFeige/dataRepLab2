@@ -9,6 +9,7 @@ import {BrowserRouter,Routes,Route}from 'react-router-dom';
 // imported the create/red from componants
 import Create from './components/create';
 import Read from './components/read';
+import Edit from './components/edit';
 
 function App() {
   return (
@@ -35,7 +36,11 @@ function App() {
     </Routes>
     <Routes>
       <Route path = '/create'element={<Create></Create>}></Route>
-    </Routes>        
+    </Routes>
+    <Routes>
+      <Route path = '/edit/:id' element={<Edit></Edit>}></Route>
+    </Routes>
+            
     </div>
     </BrowserRouter>
     

@@ -34,19 +34,19 @@ function Create() {
                     />
                 </div>
                 <div className="form-group">
-                    <label>Add Book Aurthor: </label>
-                    <input type="text"
-                        className="form-control"
-                        value={author}
-                        onChange={(e) => { setAuthor(e.target.value) }}
-                    />
-                </div>
-                <div className="form-group">
                     <label>Add front page url: </label>
                     <input type="text"
                         className="form-control"
                         value={url}
                         onChange={(e) => { setUrl(e.target.value) }}
+                    />
+                </div>
+                <div className="form-group">
+                    <label>Add Book Aurthor: </label>
+                    <input type="text"
+                        className="form-control"
+                        value={author}
+                        onChange={(e) => { setAuthor(e.target.value) }}
                     />
                 </div>
                 <div>
