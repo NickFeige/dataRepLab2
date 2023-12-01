@@ -30,7 +30,15 @@ const bookSchema= new mongoose.Schema({
  url:String,
  author:String
 });
+//delete function
 const bookModel= mongoose.model('book',bookSchema);
+//deletes the requested id
+app.delete('/api/book/:id',async(req,res)=>{
+  console.log('delete'+req.params.id);
+  //await will wait till send has a value
+  let book= await bookModel.findByIdAndDelete(req.params.id);
+  res.send(book);
+})
 
 app.put('/api/book/:id', async(req,res)=>{
   console.log("update"+req.params.id);

@@ -24,11 +24,25 @@ useEffect(
         )            
     },[]
 );
-
+const ReloadData=(e)=>{
+axios.get('http://localhost:4000/api/book')
+.then(
+    (response)=>{
+        setData(response.data);
+    }
+)
+.catch(
+    (error)=>{
+        console.log(error);
+    }
+) 
+}
+//reloads after delete
     return(
         <div>
             <h3>hello from read</h3>
-            <Books myBooks={data}></Books>
+            
+            <Books myBooks={data} reload={ReloadData}></Books>
         </div>
     )
 }

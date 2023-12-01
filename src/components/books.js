@@ -5,7 +5,8 @@ function Books(props){
     return props.myBooks.map(
         //arrow method pushing it to book items
         (book)=>{
-            return<BookItem myBook={book}></BookItem>
+            //pushes and deletes
+            return<BookItem myBook={book} key={book._id} reload={()=>{props.reload();}}></BookItem>
         }
     )
         
