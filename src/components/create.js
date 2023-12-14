@@ -31,6 +31,7 @@ function Create() {
                         className="form-control"
                         value={title}
                         onChange={(e) => { setTitle(e.target.value) }}
+                        style={{ backgroundColor: '#f3a2b3', color: 'white',borderColor: 'white' }}
                     />
                 </div>
                 <div className="form-group">
@@ -39,6 +40,7 @@ function Create() {
                         className="form-control"
                         value={url}
                         onChange={(e) => { setUrl(e.target.value) }}
+                        style={{ backgroundColor: '#f3a2b3', color: 'white'}}
                     />
                 </div>
                 <div className="form-group">
@@ -47,10 +49,11 @@ function Create() {
                         className="form-control"
                         value={author}
                         onChange={(e) => { setAuthor(e.target.value) }}
+                        style={{ backgroundColor: '#f3a2b3' , color: 'white'}}
                     />
                 </div>
                 <div>
-                    <input type="submit" value="Add book"></input>
+                    <input type="submit" value="Add book"style={{ backgroundColor: '#ea5075' , color: 'white',borderColor: 'white'}}></input>
                 </div>
             
             

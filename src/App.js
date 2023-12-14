@@ -13,10 +13,11 @@ import Edit from './components/edit';
 
 function App() {
   return (
+    
     <BrowserRouter>
-    <div className="App">
+    <div className="App" style={{ backgroundColor: '#fbd4dc' }}>
       {/* the nav bar from boot strap  */}
-      <Navbar bg="primary" data-bs-theme="dark">
+      <Navbar style={{ backgroundColor: '#f3a2b3' }}data-bs-theme="dark" >
         <Container>
           <Navbar.Brand href="/">Navbar</Navbar.Brand>
           <Nav className="me-auto">
