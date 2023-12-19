@@ -49,23 +49,16 @@ export default function Edit(props) {
         <div>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
-                    <label>Add Book shopItem: </label>
+                    <label>Change shopItem: </label>
                     <input type="text"
                         className="form-control"
                         value={shopItem}
                         onChange={(e) => setshopItem(e.target.value)}
                     />
                 </div>
+                
                 <div className="form-group">
-                    <label>Add book cover: </label>
-                    <input type="text"
-                        className="form-control"
-                        value={url}
-                        onChange={(e) => setUrl(e.target.value)}
-                    />
-                </div>
-                <div className="form-group">
-                    <label>Add book price: </label>
+                    <label>change price: </label>
                     <input type="text"
                         className="form-control"
                         value={price}
@@ -73,7 +66,7 @@ export default function Edit(props) {
                     />
                 </div>
                 <div className="form-group">
-                    <input type="submit" value="Edit Book" className="btn btn-primary" />
+                    <input type="submit" value="Edit Book"style={{ backgroundColor: '#ea5075' , color: 'white',borderColor: 'white'}} className="btn btn-primary" />
                 </div>
             </form>
         </div>

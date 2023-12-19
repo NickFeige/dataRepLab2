@@ -34,15 +34,7 @@ function Create() {
                         style={{ backgroundColor: '#f3a2b3', color: 'white',borderColor: 'white' }}
                     />
                 </div>
-                <div className="form-group">
-                    <label style={{ color: 'white' }}>Add front page url: </label>
-                    <input type="text"
-                        className="form-control"
-                        value={url}
-                        onChange={(e) => { setUrl(e.target.value) }}
-                        style={{ backgroundColor: '#f3a2b3', color: 'white'}}
-                    />
-                </div>
+               
                 <div className="form-group">
                     <label style={{ color: 'white' }}>What is the price: </label>
                     <input type="text"

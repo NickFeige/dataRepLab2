@@ -23,7 +23,7 @@ function App() {
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/create">create</Nav.Link>
-            <Nav.Link href="/read">read</Nav.Link>
+            <Nav.Link href="/read">edit</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
