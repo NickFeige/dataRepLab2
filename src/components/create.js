@@ -22,7 +22,7 @@ function Create() {
     return (
         //all my in put boxes 
         <div>
-            <h3 style={{ color: 'white' }}>YOUR SHOPPING LIST </h3>
+            <h3 style={{ color: 'white' }}>CREATE YOUR SHOPPING LIST </h3>
            
             <form onSubmit={handleSubmit}>
                 <div className="form-group">

@@ -39,7 +39,7 @@ axios.get('http://localhost:4000/api/book')
 }
 //reloads after delete
     return(
-        <div style={{ backgroundColor: '#f3a2b3'  }}>
+        <div style={{ backgroundColor: '#fbd4dc',color: 'white'   }}>
             <h3 style={{ color: 'white' }} >MY SHOPPING LIST </h3>
             
             <Books myBooks={data} reload={ReloadData}></Books>

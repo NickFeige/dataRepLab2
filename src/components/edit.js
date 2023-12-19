@@ -49,20 +49,22 @@ export default function Edit(props) {
         <div>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
-                    <label>Change shopItem: </label>
+                    <label style={{ color: 'white' }}>Change shopItem: </label>
                     <input type="text"
                         className="form-control"
                         value={shopItem}
                         onChange={(e) => setshopItem(e.target.value)}
+                        style={{ backgroundColor: '#f3a2b3', color: 'white',borderColor: 'white' }}
                     />
                 </div>
                 
                 <div className="form-group">
-                    <label>change price: </label>
+                    <label style={{ color: 'white' }}>change price: </label>
                     <input type="text"
                         className="form-control"
                         value={price}
                         onChange={(e) => setprice(e.target.value)}
+                        style={{ backgroundColor: '#f3a2b3', color: 'white',borderColor: 'white' }}
                     />
                 </div>
                 <div className="form-group">

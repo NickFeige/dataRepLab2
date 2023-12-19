@@ -13,14 +13,14 @@ function Content() {
 
   return (
     <div>
-      <h2>Hello World</h2>
-      <h2>It is {new Date().toLocaleTimeString()}.</h2>
-      <h3>Shop Items:</h3>
+      
+      <h1 style={{ color: 'white' }}>It is {new Date().toLocaleTimeString()}.</h1>
+      <h1 style={{ color: 'white' }}>Shop Items:</h1>
       <ul>
         {shopItems.map(item => (
-          <li key={item._id}>
-            <p>{item.shopItem}</p>
-            <p>Price: {item.price}</p>
+          <li key={item._id} style={{ color: 'white' }}>
+            <h3 style={{ color: 'white' }}>{item.shopItem}</h3>
+            <h3 style={{ color: 'white' }}>Price: {item.price}</h3>
           </li>
         ))}
       </ul>

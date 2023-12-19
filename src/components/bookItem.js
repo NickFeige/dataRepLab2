@@ -9,14 +9,14 @@ function BookItem(props){
         //using cards to to display the info
         <div>       
             <Card>
-            <Card.Header>{props.myBook.shopItem}</Card.Header>    
-            <Card.Body><blockquote>
-                <img src={props.myBook.url}></img>
+            <Card.Header style={{ backgroundColor: '#fbd4dc', color: 'white',borderColor: 'white' }}>{props.myBook.shopItem}</Card.Header>    
+            <Card.Body style={{ backgroundColor: '#fbd4dc', color: 'white',borderColor: 'white' }}><blockquote>
+                
                 <footer>{props.myBook.price}</footer>
                 </blockquote>
             </Card.Body>
-            <Link to ={"/edit/"+props.myBook._id}className='btn btn-primary'>edit</Link>
-            <Button variant='danger' onClick={(e)=>{
+            <Link to ={"/edit/"+props.myBook._id}className='btn btn-primary'  style={{ backgroundColor: '#f3a2b3', color: 'white',borderColor: 'white' }}>edit</Link>
+            <Button style={{ backgroundColor: '#ea5075' , color: 'white',borderColor: 'white'}} onClick={(e)=>{
                 axios.delete('http://localhost:4000/api/book/'+props.myBook._id)
                 .then((res)=>{
                     let reload=props.reload();
