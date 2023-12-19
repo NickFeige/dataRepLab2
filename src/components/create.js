@@ -3,16 +3,16 @@ import axios from "axios";
 
 function Create() {
     //creating an add function and setting a array
-    const [title, setTitle] = useState('');
-    const [author, setAuthor] = useState('');
+    const [shopItem, setshopItem] = useState('');
+    const [price, setprice] = useState('');
     const [url, setUrl] = useState('');
     //my forms to add info
     const handleSubmit=(e)=>{
         e.preventDefault();
-        console.log("Title: "+title+"Author: "+author+"Url Cover: "+url);
+        console.log("shopItem: "+shopItem+"price: "+price+"Url Cover: "+url);
         const book=({
-            title:title,
-            author:author,
+            shopItem:shopItem,
+            price:price,
             url:url,
         })
         axios.post('http://localhost:4000/api/book',book)
@@ -22,20 +22,20 @@ function Create() {
     return (
         //all my in put boxes 
         <div>
-            <h3>hello from create</h3>
+            <h3 style={{ color: 'white' }}>YOUR SHOPPING LIST </h3>
            
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
-                    <label>Add Book Title: </label>
+                    <label style={{ color: 'white' }}>What is the shopping item </label>
                     <input type="text"
                         className="form-control"
-                        value={title}
-                        onChange={(e) => { setTitle(e.target.value) }}
+                        value={shopItem}
+                        onChange={(e) => { setshopItem(e.target.value) }}
                         style={{ backgroundColor: '#f3a2b3', color: 'white',borderColor: 'white' }}
                     />
                 </div>
                 <div className="form-group">
-                    <label>Add front page url: </label>
+                    <label style={{ color: 'white' }}>Add front page url: </label>
                     <input type="text"
                         className="form-control"
                         value={url}
@@ -44,16 +44,16 @@ function Create() {
                     />
                 </div>
                 <div className="form-group">
-                    <label>Add Book Aurthor: </label>
+                    <label style={{ color: 'white' }}>What is the price: </label>
                     <input type="text"
                         className="form-control"
-                        value={author}
-                        onChange={(e) => { setAuthor(e.target.value) }}
+                        value={price}
+                        onChange={(e) => { setprice(e.target.value) }}
                         style={{ backgroundColor: '#f3a2b3' , color: 'white'}}
                     />
                 </div>
                 <div>
-                    <input type="submit" value="Add book"style={{ backgroundColor: '#ea5075' , color: 'white',borderColor: 'white'}}></input>
+                    <input type="submit" value="Add Item"style={{ backgroundColor: '#ea5075' , color: 'white',borderColor: 'white'}}></input>
                 </div>
             
             

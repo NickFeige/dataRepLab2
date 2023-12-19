@@ -30,9 +30,9 @@ async function main() {
   // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
 }
 const bookSchema= new mongoose.Schema({
- title:String,
+ shopItem:String,
  url:String,
- author:String
+ price:String
 });
 //delete function
 const bookModel= mongoose.model('book',bookSchema);
@@ -53,9 +53,9 @@ app.put('/api/book/:id', async(req,res)=>{
 app.post('/api/book',(req,res)=>{
   console.log(req.body);
   bookModel.create({
-    title:req.body.title,
+    shopItem:req.body.shopItem,
     url:req.body.url,
-    author:req.body.author
+    price:req.body.price
   })
   .then(()=>{res.send('data revived')})
   .catch(()=>{res.send('error')})

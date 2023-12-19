@@ -10,9 +10,9 @@ export default function Edit(props) {
     let { id } = useParams();
     // update arrays using the React useState()
     // and without the Array objects push() method
-    const [title, setTitle] = useState("");
+    const [shopItem, setshopItem] = useState("");
     const [url, setUrl] = useState("");
-    const [author, setAuthor] = useState("");
+    const [price, setprice] = useState("");
     // useNavigate return a function that we can use to navigate
     const navigate = useNavigate();
     //useEffect Hook is similar componentDidMount
@@ -23,9 +23,9 @@ export default function Edit(props) {
         axios.get('http://localhost:4000/api/book/' + id)
             .then((response) => {
                 // Assign Response data to the arrays using useState.
-                setTitle(response.data.title);
+                setshopItem(response.data.shopItem);
                 setUrl(response.data.url);
-                setAuthor(response.data.author);
+                setprice(response.data.price);
             })
             .catch(function (error) {
                 console.log(error);
@@ -35,9 +35,9 @@ export default function Edit(props) {
         event.preventDefault();
         const newBook = {
             id: id,
-            title: title,
+            shopItem: shopItem,
             url: url,
-            author: author
+            price: price
         };
         axios.put('http://localhost:4000/api/book/' + id, newBook)
             .then((res) => {
@@ -49,11 +49,11 @@ export default function Edit(props) {
         <div>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
-                    <label>Add Book Title: </label>
+                    <label>Add Book shopItem: </label>
                     <input type="text"
                         className="form-control"
-                        value={title}
-                        onChange={(e) => setTitle(e.target.value)}
+                        value={shopItem}
+                        onChange={(e) => setshopItem(e.target.value)}
                     />
                 </div>
                 <div className="form-group">
@@ -65,11 +65,11 @@ export default function Edit(props) {
                     />
                 </div>
                 <div className="form-group">
-                    <label>Add book author: </label>
+                    <label>Add book price: </label>
                     <input type="text"
                         className="form-control"
-                        value={author}
-                        onChange={(e) => setAuthor(e.target.value)}
+                        value={price}
+                        onChange={(e) => setprice(e.target.value)}
                     />
                 </div>
                 <div className="form-group">
