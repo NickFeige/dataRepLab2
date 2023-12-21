@@ -68,7 +68,7 @@ export default function Edit(props) {
                     />
                 </div>
                 <div className="form-group">
-                    <input type="submit" value="Edit Book"style={{ backgroundColor: '#ea5075' , color: 'white',borderColor: 'white'}} className="btn btn-primary" />
+                    <input type="submit" value="Edit "style={{ backgroundColor: '#ea5075' , color: 'white',borderColor: 'white'}} className="btn btn-primary" />
                 </div>
             </form>
         </div>
