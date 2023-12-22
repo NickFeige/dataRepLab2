@@ -53,8 +53,7 @@ app.put('/api/book/:id', async(req,res)=>{
 app.post('/api/book',(req,res)=>{
   console.log(req.body);
   bookModel.create({
-    shopItem:req.body.shopItem,
-    url:req.body.url,
+    shopItem:req.body.shopItem,    
     price:req.body.price
   })
   .then(()=>{res.send('data revived')})
@@ -68,7 +67,7 @@ app.get('/', (req, res) => {
   
 })
 
-//setting up a api for books
+//setting up a api for shopping
 app.get('/api/book',async(req,res)=>{
    let book = await bookModel.find({});
    res.json(book);  
@@ -86,3 +85,5 @@ app.get('/api/book',async(req,res)=>{
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
+
+

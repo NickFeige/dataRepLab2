@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 import {Link} from 'react-router-dom';
 import Button  from 'react-bootstrap/Button';
 import axios from 'axios';
-function BookItem(props){
+function ShoppingItem(props){
     //pulling data from the list array 
     return(
         //using cards to to display the info
@@ -28,8 +28,4 @@ function BookItem(props){
         </div>    
     );
 }
-export default BookItem;
-
-
-
-
+export default ShoppingItem;

@@ -10,8 +10,7 @@ export default function Edit(props) {
     let { id } = useParams();
     // update arrays using the React useState()
     // and without the Array objects push() method
-    const [shopItem, setshopItem] = useState("");
-    const [url, setUrl] = useState("");
+    const [shopItem, setshopItem] = useState("");    
     const [price, setprice] = useState("");
     // useNavigate return a function that we can use to navigate
     const navigate = useNavigate();
@@ -23,8 +22,7 @@ export default function Edit(props) {
         axios.get('http://localhost:4000/api/book/' + id)
             .then((response) => {
                 // Assign Response data to the arrays using useState.
-                setshopItem(response.data.shopItem);
-                setUrl(response.data.url);
+                setshopItem(response.data.shopItem);                
                 setprice(response.data.price);
             })
             .catch(function (error) {
@@ -35,8 +33,7 @@ export default function Edit(props) {
         event.preventDefault();
         const newBook = {
             id: id,
-            shopItem: shopItem,
-            url: url,
+            shopItem: shopItem,          
             price: price
         };
         axios.put('http://localhost:4000/api/book/' + id, newBook)

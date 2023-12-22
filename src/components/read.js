@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Books from "./books";
+import Shopping from "./shopping";
 //imported axious
 import axios from "axios";
 
@@ -42,8 +42,10 @@ axios.get('http://localhost:4000/api/book')
         <div style={{ backgroundColor: '#fbd4dc',color: 'white'   }}>
             <h3 style={{ color: 'white' }} >EDIT SHOPPING LIST </h3>
             
-            <Books myBooks={data} reload={ReloadData}></Books>
+            <Shopping myBooks={data} reload={ReloadData}></Shopping>
         </div>
+
+
     )
 }
 export default Read;
